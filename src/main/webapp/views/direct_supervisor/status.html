@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Status</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/jumbotron/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Linking my external customizable stylesheet loginsytles.css -->
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+
+    <style>
+      .nav {
+          background-color: whitesmoke;
+          padding: 10px 10px 10px 10px;
+        }
+      .shadow-sm {
+          box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2), 0 6px 5px 0 rgba(0,0,0,0.19);
+        }
+    </style>
+
+</head>
+<body class="bg-light">
+        <nav class="nav shadow-sm navbar navbar-expand-md navbar-light bg-light fixed-top">
+
+          <a class="navbar-brand" >
+            <img src="images/creativeconcepts_logo.png" height="30" 
+            class="d-inline-block align-top" alt="">
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Account</a>
+              </li>
+            </ul>
+            <a class="nav-link" href="/P1Servlet/index.html">Logout</a>
+          </div>
+        </nav>
+        <div class="container status-container">
+          <h3 class="h3" id="loadStatus">Your Current Status</h3>
+          <br/>
+          <div class="col-12 d-flex justify-content-center">
+            <table id="status-table" class="table table-bordered">
+            <caption>
+            	Approval Key // 0 = Pending // 1 = Approved // 2 = Denied
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Campus</th>
+                <th scope="col">Date</th>
+                <th scope="col">Grade</th>
+                <th scope="col">Reason</th>
+                <th scope="col">Description</th>
+                <th scope="col">Cost ($)</th>
+                <th scope="col">TOA From</th>
+                <th scope="col">TOA To</th>
+                <th scope="col">Approved By D.H.</th>
+              </tr>
+            </thead>
+            <tbody id="bodied">
+              
+            </tbody>
+          </table>
+          
+        </div>
+          <hr>
+          <h3 class="h3" id="loadLowerEmployeesStatus" >Pending Reimbursement Forms</h3>
+          <br/>
+          <div class="col-12 d-flex justify-content-center">
+            <table id="status-table" class="table table-bordered">
+            <caption>Your employee's are waiting for approval</caption>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Employee Username</th>
+                <th scope="col">Campus</th>
+                <th scope="col">Date</th>
+                <th scope="col">Grade</th>
+                <th scope="col">Reason</th>
+                <th scope="col">Description</th>
+                <th scope="col">Cost ($)</th>
+                <th scope="col">Options</th>
+              </tr>
+            </thead>
+            <tbody id="loweremployeesbodied">
+            </tbody>  
+          </table>
+        </div>
+        
+        <div class="col-12">
+        <a href="homepage.html" >
+          <button type="button" href="homepage.html" class="btn btn-secondary btn-md">&laquo; Go back to Homepage</button>
+        </a>
+        <a href="log.html" >
+        <button type="button" href="log.html" class="btn btn-primary btn-md button float-right">Go to Reimbursement Log &raquo;</button>
+      </a>
+        </div>
+        <!-- STATUS FORM FOOTER -->
+        <footer class="my-5 pt-5 text-muted text-right text-small">
+          <hr>
+          <p class="mb-1">&copy; Leah Medina, Revature 2019</p>
+        </footer>
+      </div>
+    </div>
+    </div>
+      <!-- ADDING FUNCTIONALITY & POPULATING THE TABLE WITH SUPERVISOR FORM INFO -->
+      <script src="./scripts/supervisorscript.js"></script>
+  </body>
+</html>

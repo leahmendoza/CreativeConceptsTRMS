@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+
+    <title>Direct Supervisor Portal</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/jumbotron/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Linking my external customizable stylesheet loginsytles.css -->
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    
+    <!-- My style block-->
+      <style>
+        .nav {
+          background-color: whitesmoke;
+          padding: 10px 10px 10px 10px;
+        }
+        .header-background {
+          background: url(images/background-geo.png) top;
+          background-size: cover;
+        }
+        .jumbo-margin {
+          padding-top: 150px;
+        }
+        .button {
+          background: url(images/abstractbackground.png) top;
+          border-color: #15bda5;
+        }
+        .shadow{
+          box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
+        }
+        .module-background {
+          background-color: whitesmoke;
+          padding-bottom: 20px;
+        }
+
+      </style>
+  </head>
+  <body>
+      <nav class="nav shadow navbar navbar-expand-md navbar-light bg-light fixed-top">
+
+        <a class="navbar-brand">
+        <img src="images/creativeconcepts_logo.png" height="30" 
+        class="d-inline-block align-top" alt="">
+      </a>
+      
+      <button class="navbar-toggler justify-content-end " type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end " id="navbar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Account</a>
+          </li>
+        </ul>
+        <a class="nav-link" href="/P1Servlet/index.html">Logout</a>
+      </div>
+    </nav>
+
+    <main role="main">
+
+          <!-- WELCOME EMPLOYEE TO PORTAL-->
+        <div class="header-background jumbotron jumbo-margin shadow" > 
+            <div class="container">
+              <h1 class="display-3" style="color:white">Hi, Supervisor</h1>
+              <p style="color:white">
+                Welcome to your direct supervisor portal. Here you can create, view, and log 
+                <br/> 
+                all your reimbursement forms from Creative Concepts. </p>
+              </p>
+              <p id="todaysdate" class="text-light font-italic"></p>
+              <button class="btn btn-primary btn-lg font-light" role="button" 
+                      id="datebutton" >Today's Date &raquo;</button>
+            </div>
+          </div>
+
+          <div class="container">
+            <!-- CARD DECK WITH 3 OPTIONS TO CHOOSE FROM: CREATE FORM, VIEW STATUS, VIEW LOG-->
+          <div class="card-deck">
+            <div class="card">
+              <a href="reimbursement_form.html" >
+              <img class="card-img-top" src="images/white-lines.jpg" alt="Create">
+              <div class="card-body">
+                <h5 class="card-title">Create</h5>
+                </a>
+                <p class="card-text">Create a new reimbursement form.</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="status.html" >
+              <img class="card-img-top module-background" src="images/status.png" alt="Status">
+              <div class="card-body">
+                <h5 class="card-title">Status</h5>
+              </a>
+                <p class="card-text">This is where you will see the status of your reimbursement submission</p>
+            </div>
+            </div>
+            <div class="card">
+              <a href="log.html">
+              <img class="card-img-top" src="images/white-lines.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Log</h5>
+              </a>
+                <p class="card-text">This is where you will find your log of submissions.</p>
+            </div>
+            </div>
+          </div>
+        <hr>
+      </div> <!-- /container -->
+
+    </main>
+    
+    <!-- FOOTER WITH COMPANY NAME AND COPYRIGHT-->
+    <footer class="container text-right">
+      <p>&copy; Leah Medina, Revature 2019</p>
+    </footer> 
+
+    <!-- EVENT LISTENER TO DISPLAY CURRENT DATE-->
+    <script>
+        document.getElementById("datebutton").addEventListener("click", displayDate);
+
+        function displayDate() {
+          document.getElementById("todaysdate").innerHTML = Date();
+        }
+    </script>
+  
+  </body>
+</html>

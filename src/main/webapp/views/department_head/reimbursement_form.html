@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Employee Reimburstment Form</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/jumbotron/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Linking my external customizable stylesheet loginsytles.css -->
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+
+    <style>
+      .nav {
+          background-color: whitesmoke;
+          padding: 10px 10px 10px 10px;
+        }
+      .shadow-sm {
+          box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2), 0 6px 5px 0 rgba(0,0,0,0.19);
+        }
+    </style>
+
+</head>
+<body class="bg-light">
+        <nav class="nav shadow-sm navbar navbar-expand-md navbar-light bg-light fixed-top">
+
+          <a class="navbar-brand" >
+            <img src="images/creativeconcepts_logo.png" height="30" 
+            class="d-inline-block align-top" alt="">
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Account</a>
+              </li>
+            </ul>
+            <a class="nav-link" href="/P1Servlet/index.html">Logout</a>
+          </div>
+        </nav>
+
+      <div class="container">
+      <div class="py-5 text-center">
+      </div>
+      <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+          <img class="mb-4" src="images/create.png" alt="" width="350">
+        </div>
+        <div class="col-md-8 order-md-1">
+          <h2 class="h3">Reimbursement Form</h2>
+          <!-- BREAK HR LINE -->
+          <hr class="mb-4">
+          <h4 class="h4 mb-3">Employee Information</h4>
+          <p>Please fill out the form below, the reimbursement will then be sent to your supervisor for approval.</p>
+          <form action="http://localhost:8080/P1Servlet/creativeconcepts/reimburesmentforms/dh_submit" method="post" class="needs-validation" novalidate>
+            
+            <!-- EMPLOYEE INFORMATION SECTION ON FORM -->
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="fname">First name</label>
+                <input name="fname" type="text" class="form-control" id="fname" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lname">Last name</label>
+                <input name="lname" type="text" class="form-control" id="lname" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+            </div>
+
+            <!-- BREAK HR LINE -->
+            <hr class="mb-4">
+
+            <h4 class="h4 mb-3">Reimbursement Information</h4>
+            
+            <!-- REIMBURSEMENT INFORMATION SECTION ON FORM -->
+            <div class="row">
+            <!-- SELECT CAMPUS -->
+            <div class="col-md-6 form-group">
+              <label for="campus">Campus:</label>
+              <select name="campus" class="form-control" id="fcampus">
+                <option>UTA Arlington, TX</option>
+                <option>Tampa, FL</option>
+                <option>Richmond, VA</option>
+                <option>New York, NY</option>
+              </select>
+            </div>
+            <!-- TODAY'S DATE -->
+            <div class="col-md-6 mb-3">
+                <label for="date_received">Today's Date</label>
+                <input name="date_received" class="form-control" type="date" id="fdate_received">
+            </div>
+            </div>
+
+            <div class="row">
+            <!-- DETAILS OF REIMBURSTMENT -->
+            <div class="col-md-6 form-group">
+              <label for="event_type">Event Type</label>
+              <select name="event_type" class="form-control" id="fevent_type">
+                <option selected disabled>Please select</option>
+                <option  value="Certification">Certification</option>
+                <option value="Technical Training">Technical Training</option>
+                <option value="University Course">University Course</option>
+                <option  value="Seminar">Seminar</option>
+                <option  value="Other">Other</option>
+              </select>
+            </div>
+            <!-- GRADING FORMAT-->
+            <div class="col-md-6 form-group">
+              <label for="grading_format">Grading Format</label>
+              <select name="grading_format" class="form-control" id="fgrading_format">
+                <option selected disabled>Please select</option>
+                <option value="PASSED">PASSED</option>
+                <option value="FAILED">FAILED</option>
+              </select>
+            </div>
+            </div>
+            <!-- REASON FOR REIMBURSEMENT TEXT AREA-->
+            <div class="mb-3">
+              <label for="reason-for-reimb">Reason for Reimbursement</label>
+              <textarea name="reason" class="form-control" rows="5" id="freason" placeholder="Explain why you should recieve this reimbursement." required></textarea>
+            </div>
+            <!-- DESCRIPTION TEXT AREA-->
+            <div class="mb-3">
+                <label for="description">Description</label>
+                <input name="description" type="text" class="form-control" id="fdescription" 
+                placeholder="Describe your reimbursement." value="" required>
+            </div>
+
+            <!-- COST OF REIMBURSEMENT -->
+            <label  for="cost">Cost</label>
+            <div class="row">
+              <div class="input-group col-md-6 mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">$</span>
+                </div>
+                <input name="cost" type="text" id="fcost"
+                class="form-control" aria-label="Amount (to the nearest dollar)">
+                <div class="input-group-append">
+                  <span class="input-group-text">.00</span>
+                </div>
+              </div>
+              
+              <!-- UPLOAD DOCUMENT -->
+              <div class="input-group col-md-6 mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Upload</span>
+                </div>
+                <div class="custom-file">
+                  <input name="supporting_document" type="file" class="custom-file-input" id="fsupporting_document">
+                  <label class="custom-file-label" for="supporting document">Choose file</label>
+                </div>
+              </div>
+            </div>
+            
+            <!-- BREAK HR LINE -->
+            <hr class="mb-4">
+            <h4 class="h4 mb-3">Time of Absence Information</h4>
+
+            <!-- TIME OF ABSENCE INFORMATION SECTION ON FORM -->
+              <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="from-date-input">From</label>
+                <input name="timeOfAbsence_FROM" class="form-control" type="date" id="ftimeOfAbsence_FROM">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="to-date-input">To</label>
+                <input name="timeOfAbsence_TO" class="form-control" type="date" id="ftimeOfAbsence_TO">
+              </div>
+            </div>
+            <br/>
+
+            <!-- SUBMIT BUTTON -->
+            <button id="theButton" class="button btn btn-primary btn-lg btn-block" type="submit">
+             Submit
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- REIMBURSTMENT FORM FOOTER -->
+      <footer class="my-5 pt-5 text-muted text-right text-small">
+        <hr>
+        <p class="mb-1">&copy; Leah Medina, Revature 2019</p>
+      </footer>
+
+    </div>
+  </body>
+</html>

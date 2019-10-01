@@ -1,0 +1,60 @@
+body {
+	background-color: whitesmoke;
+}
+
+p {
+	font-family-sans-serif: "Raleway", sans-serif;
+	font-size-base: 14px;
+	line-height-base: 1.6;
+	text-color: #636b6f;
+}
+
+form {
+	margin-top: 130px;
+}
+
+footer {
+	margin-top: 30px;
+	position: fixed;
+  	left: 0;
+  	bottom: 0;
+  	width: 100%;
+  	background: #D4DCDD;
+	padding: 50px 0 0 0;
+  	color: white;
+  	text-align: center;
+}
+
+footer p{
+	margin-bottom: 50px;
+}
+footer h2{
+	color: #3E3E3E;
+	font-size: 5vw;
+	line-height: 6vw;
+	text-align: right;
+	margin-bottom: 0.7vw;
+}
+
+footer h3{
+	color: #666666;
+	font-size: 1.33vw;
+	text-align: right;
+}
+
+.text-primary: {
+	color: #3097D1;
+}
+.text-info: {
+	color: #8eb4cb;
+}
+.text-success: {
+	color: #2ab27b;
+}
+.text-warning: {
+	color: #cbb956;
+}
+.text-danger: {
+	color: #bf5329;
+}
+

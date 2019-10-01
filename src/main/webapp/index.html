@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      <!-- Linking Bootstrap-->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      
+      <!-- Linking my external customizable stylesheet loginsytles.css -->
+      <link rel="stylesheet" type="text/css" href="styles/loginstyles.css" />
+
+      <!-- My style block-->
+      <style>
+        .button {
+          background-color: #00d2b4;
+          border-color: #00d2b4;
+        }
+        .button:hover {
+          background-color: #15bda5;
+          border-color: #15bda5;
+        }
+        .button:disabled {
+          background-color: #15bda5;
+          border-color: #15bda5;
+        }
+        .shadow{
+          box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
+        }
+      </style>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+         <div class="col-sm-4">
+          </div>
+          <div class="col-sm-4">
+          
+          		<!--  Forms have both an "action" and a method.
+          		This "action" specifies the end-point which we want
+          		to hit when submitting the form. The "method" specifies
+          		the HTTP verb we'll be using. -->
+          		
+              <form action="./creativeconcepts" method="post" class="form-signin">
+                <div class="text-center mb-4">
+                  <img class="mb-4" src="images/creativeconcepts_logo.png" alt="" width="350">
+                </div>
+				
+				<!-- If we want to grab form data from the client, we must give each 
+				piece of information that is sent to the server by it's "name" attribute -->
+				
+                <div class="form-label-group">
+                  <input name="username" type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+                  <label for="inputUsername">Username</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                  <label for="inputPassword">Password</label>
+                </div>
+
+                <div class="checkbox mb-3">
+                  <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                  </label>
+                </div>
+
+                <!-- Using inline styles to make my button text white-->
+                <button class="btn btn-lg btn-primary btn-block button shadow" type="submit" >
+				Sign in
+                </button>
+                
+              </form>
+          </div>
+          <div class="col-sm-4">
+          </div>
+          <footer>
+            <p> &copy; Leah Medina, Revature 2019</p>
+          </footer>
+        </div>
+      </div>
+
+    </body>
+</html>
